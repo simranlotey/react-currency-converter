@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.waviy {
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+  font-size: 70px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waviy span {
+  font-family: "Signika Negative", sans-serif;
+  display: inline-block;
+  color: rgb(243, 41, 41);
+  text-transform: uppercase;
+  animation: waviy 1.5s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-6px);
+  }
+}
+
+.amount {
+  width: 440px;
+  display: flex;
+}
+
+@media only screen and (max-width: 320px) {
+  .waviy {
+    font-size: 54px;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .waviy {
+    font-size: 54.74px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .amount {
+    width: 330px;
+  }
+}
+
+.dropdowns {
+  margin-top: 60px;
+}
+
+.col-sm-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.col-sm-8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-sm-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  background-color: transparent !important;
+  border: none;
+  position: relative;
+  display: block;
+  outline: none;
+  color: white;
+  border-bottom: 4px solid white;
+}
+
+input[type="text"]:focus {
+  border: none;
+  border-bottom: 4px solid white;
+  outline: none;
+}
+
+.container-fluid {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fas {
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+.btn-scolor {
+  background-color: #ff5c5c;
+  color: white;
+  width: 210px;
+}
+
+.btn-scolor:hover {
+  background-color: #fc4848;
+  color: white;
+}
+
+.btn-rcolor {
+  background-color: #543b8c;
+  color: white;
+  width: 210px;
+}
+
+.btn-rcolor:hover {
+  background-color: #3d1d83;
+  color: white;
+}
+
+.result {
+  font-size: 60px;
+  color: white;
+  margin-top: 45px;
+}
+
+.rate {
+  font-size: 30px;
+  color: white;
+  margin-top: 13px;
+}
