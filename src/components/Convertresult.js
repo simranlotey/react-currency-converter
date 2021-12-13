@@ -10,8 +10,8 @@ function Convertresult({ Loading, result, rate }) {
                 result &&
                 rate && (
                     <>
-                        <h1 className="result">{result}</h1>
-                        <h4 className="rate ">Current Rate = {rate}</h4>
+                        <h1 className="result">72.87</h1>
+                        <h4 className="rate ">45.87</h4>
                     </>
                 )
             )}

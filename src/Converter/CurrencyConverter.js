@@ -55,8 +55,6 @@ class CurrencyConverter extends Component {
 
     handleSwitch = () => {
         const { from, into } = this.state;
-        // console.log(from);
-        // console.log(into);
         this.setState({ from: into, into: from });
     };
 
@@ -71,62 +69,52 @@ class CurrencyConverter extends Component {
         } = this.state
         return (
             <>
-                <div className='container-fluid'>
-                    <div className='dropdowns'>
-                        <div className='row'>
-                            <div className='col-sm-5 d-sm-flex'>
-                                <Dropdowns
-                                    labelName="From"
-                                    handleChange={this.handleFrom}
-                                    value={from}
-                                ></Dropdowns>
-                            </div>
-                            <div className='col-sm-2 text-center swap'>
-                                <button className="btn" onClick={this.handleSwitch}><i className="fas fa-exchange-alt"></i></button>
-                            </div>
-                            <div className='col-sm-5 d-sm-flex'>
-                                <Dropdowns
-                                    labelName="Into"
-                                    handleChange={this.handleInto}
-                                    value={into}
-                                ></Dropdowns>
-                            </div>
-                        </div>
+                <div className='container-fluid shadow'>
+                    <input
+                        className="form-control-lg mt-5 shadow amount bg-dark"
+                        placeholder="Enter Amount"
+                        value={amount}
+                        type="number"
+                        onChange={this.handleInput}
+                    />
+                    <div className='fromdrop'>
+                        <Dropdowns
+                            labelName="From"
+                            handleChange={this.handleFrom}
+                            value={from}
+                        ></Dropdowns>
                     </div>
-                    <div className='row'>
-                        <div className='col-sm-8 d-sm-flex'>
-                            <input
-                                className="form-control-lg mt-5 amount"
-                                placeholder="Enter Amount"
-                                value={amount}
-                                type="text"
-                                onChange={this.handleInput}
-                            />
-                        </div>
-                        <div className='col-sm-4 d-sm-flex'>
-                            <div className="mt-5 text-center">
-                                <button
-                                    className='btn btn-scolor btn-lg'
-                                    disabled={amount === "0" || amount === ""}
-                                    onClick={() => this.convertCurrency(this.state)}
-                                >Convert</button>
-                            </div>
-                        </div>
+                    <div className='text-center swap'>
+                        <button className="btn shadow text-center" onClick={this.handleSwitch}><i class="fas fa-sort"></i></button>
                     </div>
-                </div>
-                <div className="mt-5 text-center">
-                    <button
-                        className='btn btn-rcolor btn-lg'
-                        text="Reset"
-                        onClick={this.handleReset}
-                    >Reset <i className="fas fa-redo-alt"></i></button>
-                </div>
-                <div className='mt-4 text-center'>
-                    <Convertresult
-                        Loading={loading}
-                        result={conversionResult}
-                        rate={conversionRate}
-                    ></Convertresult>
+                    <div className='intodrop'>
+                        <Dropdowns
+                            labelName="Into"
+                            handleChange={this.handleInto}
+                            value={into}
+                        ></Dropdowns>
+                    </div>
+                    <div className="mt-5 text-center shadow">
+                        <button
+                            className='btn btn-scolor btn-lg'
+                            disabled={amount === "0" || amount === ""}
+                            onClick={() => this.convertCurrency(this.state)}
+                        >Convert</button>
+                    </div>
+                    <div className="mt-4 text-center shadow">
+                        <button
+                            className='btn btn-rcolor btn-lg'
+                            text="Reset"
+                            onClick={this.handleReset}
+                        >Reset <i className="fas fa-redo-alt"></i></button>
+                    </div>
+                    <div className='mt-5 text-center'>
+                        <Convertresult
+                            Loading={loading}
+                            result={conversionResult}
+                            rate={conversionRate}
+                        ></Convertresult>
+                    </div>
                 </div>
             </>
         )

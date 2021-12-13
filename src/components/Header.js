@@ -4,7 +4,7 @@ import { Header } from '../config/api';
 
 function header() {
     return (
-        <div className="waviy">
+        <div className="header">
             <span className="text-center">{Header}</span>
         </div>
     )
