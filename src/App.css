@@ -8,7 +8,7 @@
 .waviy {
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
   font-size: 70px;
-  margin-top: 90px;
+  margin-top: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,7 @@
 }
 
 .dropdowns {
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .col-sm-6 {
