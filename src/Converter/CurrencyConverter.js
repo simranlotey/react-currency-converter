@@ -108,7 +108,7 @@ class CurrencyConverter extends Component {
                             onClick={this.handleReset}
                         >Reset <i className="fas fa-redo-alt"></i></button>
                     </div>
-                    <div className='mt-5 text-center'>
+                    <div className='mt-5 mb-2 text-center'>
                         <Convertresult
                             Loading={loading}
                             result={conversionResult}
