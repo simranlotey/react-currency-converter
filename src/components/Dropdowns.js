@@ -4,10 +4,10 @@ function Dropdowns({ labelName, handleChange, value }) {
     return (
 
         <>
-            <label className="dropdown" style={{ "width": "325px", "color": "white", "fontSize": "23px" }}>
+            <label className="dropdown" style={{ "width": "325px", "color": "white", "fontSize": "21px" }}>
                 {labelName}
                 <select
-                    className='form-select bg-dark form-select-lg text-white border-dark shadow'
+                    className='form-select bg-dark custom-select form-select-lg text-white border-dark shadow'
                     value={value}
                     onChange={event => handleChange(event)}
                 >

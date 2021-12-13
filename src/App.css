@@ -8,7 +8,7 @@
 .header span {
   font-family: "Signika Negative", sans-serif;
   color: white;
-  font-size: 47px;
+  font-size: 44px;
   margin-top: 35px;
   text-transform: uppercase;
   display: flex;
@@ -18,10 +18,16 @@
 .amount {
   width: 330px;
   display: flex;
+  border: none;
+  display: flex;
+  outline: none;
+  color: white;
+  font-size: 17px;
+  border-bottom: 4px solid white;
 }
 
 .swap button {
-  margin-top: 17px;
+  margin-top: 13px;
   width: 45px;
   border-radius: 15%;
   background-color: #212836;
@@ -40,18 +46,8 @@
   background-color: #293140;
 }
 
-input {
-  background-color: transparent !important;
-  border: none;
-  position: relative;
-  display: flex;
-  outline: none;
-  color: white;
-  border-bottom: 4px solid white;
-}
-
 .container-fluid {
-  width: 450px;
+  width: 430px;
   display: flex;
   margin-top: 10px;
   background-color: #1a202c;
@@ -60,6 +56,11 @@ input {
   display: flex;
   justify-content: center;
   border-radius: 13px;
+}
+
+.custom-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  font-size: 17px;
 }
 
 .dropdown {
@@ -84,6 +85,7 @@ input {
   font-family: "Open Sans", sans-serif;
   color: white;
   width: 180px;
+  font-size: 17px;
 }
 
 .btn-scolor:hover {
@@ -96,6 +98,7 @@ input {
   font-family: "Open Sans", sans-serif;
   color: white;
   width: 180px;
+  font-size: 17px;
 }
 
 .btn-rcolor:hover {
