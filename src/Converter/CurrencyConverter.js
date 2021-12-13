@@ -79,7 +79,7 @@ class CurrencyConverter extends Component {
                                     value={from}
                                 ></Dropdowns>
                             </div>
-                            <div className='col-sm-2 text-white text-center swap'>
+                            <div className='col-sm-2 text-center swap'>
                                 <button className="btn" onClick={this.handleSwitch}><i className="fas fa-exchange-alt"></i></button>
                             </div>
                             <div className='col-sm-5 d-sm-flex'>
