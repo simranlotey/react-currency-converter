@@ -9,7 +9,7 @@
   font-family: "Signika Negative", sans-serif;
   color: white;
   font-size: 44px;
-  margin-top: 35px;
+  margin-top: 60px;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -37,7 +37,8 @@
 
 .swap button i {
   font-size: 17px;
-  margin-right: 4px;
+  margin-right: 7px;
+  margin-top: 5px;
   color: white;
   cursor: pointer;
 }
@@ -109,11 +110,14 @@
 .result {
   font-size: 60px;
   color: white;
-  margin-top: 45px;
+  font-family: "Open Sans", sans-serif;
+  margin-top: -19px;
 }
 
 .rate {
   font-size: 30px;
   color: white;
+  font-family: "Open Sans", sans-serif;
   margin-top: 13px;
+  margin-bottom: 30px;
 }
