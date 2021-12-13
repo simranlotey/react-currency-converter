@@ -85,7 +85,7 @@ class CurrencyConverter extends Component {
                         ></Dropdowns>
                     </div>
                     <div className='text-center swap'>
-                        <button className="btn shadow text-center" onClick={this.handleSwitch}><i class="fas fa-sort"></i></button>
+                        <button className="btn shadow text-center" onClick={this.handleSwitch}><i className="fas fa-sort"></i></button>
                     </div>
                     <div className='intodrop'>
                         <Dropdowns
