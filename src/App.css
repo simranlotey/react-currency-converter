@@ -44,16 +44,10 @@ input {
   background-color: transparent !important;
   border: none;
   position: relative;
-  display: block;
+  display: flex;
   outline: none;
   color: white;
   border-bottom: 4px solid white;
-}
-
-input[type="text"]:focus {
-  border: none;
-  border-bottom: 4px solid white;
-  outline: none;
 }
 
 .container-fluid {
@@ -67,15 +61,19 @@ input[type="text"]:focus {
   justify-content: center;
   border-radius: 13px;
 }
+
 .dropdown {
   font-family: "Open Sans", sans-serif;
 }
+
 .fromdrop {
   margin-top: 30px;
 }
+
 .intodrop {
   margin-top: -20px;
 }
+
 .fas {
   font-size: 17px;
   margin-left: 5px;
