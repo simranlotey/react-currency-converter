@@ -37,15 +37,15 @@ class CurrencyConverter extends Component {
         })
     }
 
-    handleInput = event => {
+    handleInput = (event) => {
         this.setState({ amount: event.target.value });
     }
 
-    handleFrom = event => {
+    handleFrom = (event) => {
         this.setState({ from: event.currentTarget.value });
     }
 
-    handleInto = event => {
+    handleInto = (event) => {
         this.setState({ into: event.currentTarget.value });
     }
 
@@ -53,6 +53,10 @@ class CurrencyConverter extends Component {
         this.setState(this.default)
     }
 
+    handleSwitch = () => {
+        const { from, into } = this.state;
+        this.setState({ from: into, into: from });
+    };
 
     render() {
         const {
@@ -68,14 +72,17 @@ class CurrencyConverter extends Component {
                 <div className='container-fluid'>
                     <div className='dropdowns'>
                         <div className='row'>
-                            <div className='col-sm-6 d-sm-flex'>
+                            <div className='col-sm-5 d-sm-flex'>
                                 <Dropdowns
                                     labelName="From"
                                     handleChange={this.handleFrom}
                                     value={from}
                                 ></Dropdowns>
                             </div>
-                            <div className='col-sm-6 d-sm-flex'>
+                            <div className='col-sm-2 text-white text-center swap'>
+                                <button className="btn" onClick={this.handleSwitch}><i className="fas fa-exchange-alt"></i></button>
+                            </div>
+                            <div className='col-sm-5 d-sm-flex'>
                                 <Dropdowns
                                     labelName="Into"
                                     handleChange={this.handleInto}

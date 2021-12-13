@@ -63,7 +63,7 @@
   margin-top: 55px;
 }
 
-.col-sm-6 {
+.col-sm-5 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,6 +82,18 @@
   justify-content: center;
 }
 
+.swap button {
+  margin-top: 57px;
+  border-radius: 50%;
+  background-color: #055a89;
+  border-color: #055a89;
+}
+
+.swap button i {
+  font-size: 16px;
+  margin-right: 4px;
+  color: white;
+}
 input {
   background-color: transparent !important;
   border: none;
