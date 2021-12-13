@@ -1,5 +1,4 @@
 import React from 'react'
-import '@blueprintjs/core/lib/css/blueprint.css';
 
 function Dropdowns({ labelName, handleChange, value }) {
     return (
