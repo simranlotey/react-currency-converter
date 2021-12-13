@@ -82,6 +82,13 @@
   justify-content: center;
 }
 
+@media only screen and (max-width: 576px) {
+  .col-sm-2 {
+    margin-top: -35px;
+    margin-bottom: -35px;
+  }
+}
+
 .swap button {
   margin-top: 64px;
   border-radius: 50%;

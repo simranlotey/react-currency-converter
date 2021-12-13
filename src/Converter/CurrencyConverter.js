@@ -55,6 +55,8 @@ class CurrencyConverter extends Component {
 
     handleSwitch = () => {
         const { from, into } = this.state;
+        // console.log(from);
+        // console.log(into);
         this.setState({ from: into, into: from });
     };
 
