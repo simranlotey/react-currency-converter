@@ -94,16 +94,16 @@ class CurrencyConverter extends Component {
                             value={into}
                         ></Dropdowns>
                     </div>
-                    <div className="mt-5 text-center shadow">
+                    <div className="mt-5 text-center">
                         <button
-                            className='btn btn-scolor btn-lg'
-                            disabled={amount === "0" || amount === ""}
+                            className='btn btn-scolor btn-lg shadow'
+                            disabled={amount === "0" || amount === "" || amount < 0}
                             onClick={() => this.convertCurrency(this.state)}
                         >Convert</button>
                     </div>
-                    <div className="mt-4 text-center shadow">
+                    <div className="mt-4 text-center">
                         <button
-                            className='btn btn-rcolor btn-lg'
+                            className='btn btn-rcolor btn-lg shadow'
                             text="Reset"
                             onClick={this.handleReset}
                         >Reset <i className="fas fa-redo-alt"></i></button>
