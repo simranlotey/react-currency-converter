@@ -1,6 +1,6 @@
 # React Currency Converter
 
-![](https://github.com/simranlotey/react-currency-converter/src/components/Images/demo.png)
+![](https://github.com/simranlotey/react-currency-converter/blob/master/src/components/Images/demo.png)
 
 ## Getting Started with Create React App
 
