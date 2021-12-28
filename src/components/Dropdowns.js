@@ -15,8 +15,6 @@ function Dropdowns({ labelName, handleChange, value }) {
                     <option>EUR</option>
                     <option>PHP</option>
                     <option>INR</option>
-                    <option>USD</option>
-                    <option>GBD</option>
                     <option>AUD</option>
                     <option>INR</option>
                     <option>NZD</option>
