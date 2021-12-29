@@ -122,4 +122,5 @@
   font-family: "Open Sans", sans-serif;
   margin-top: 13px;
   margin-bottom: 30px;
+  word-break: break-all;
 }
