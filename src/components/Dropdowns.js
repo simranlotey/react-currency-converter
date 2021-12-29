@@ -44,9 +44,7 @@ function Dropdowns({ labelName, handleChange, value }) {
                     <option>CNY</option>
                     <option>SEK</option>
                 </select>
-
             </label>
-
         </>
     )
 }

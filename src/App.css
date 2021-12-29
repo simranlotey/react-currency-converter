@@ -57,6 +57,7 @@
   display: flex;
   justify-content: center;
   border-radius: 13px;
+  margin-bottom: 105px;
 }
 
 .custom-select {
@@ -112,6 +113,8 @@
   color: white;
   font-family: "Open Sans", sans-serif;
   margin-top: -19px;
+  width: 370px;
+  word-break: break-all;
 }
 
 .rate {
