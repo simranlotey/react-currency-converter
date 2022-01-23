@@ -1,126 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Signika+Negative:wght@600&display=swap");
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .header span {
-  font-family: "Signika Negative", sans-serif;
-  color: white;
-  font-size: 44px;
-  margin-top: 40px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
+    font-family: "Signika Negative", sans-serif;
+    color: white;
+    font-size: 44px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
 }
 
 .amount {
-  width: 330px;
-  display: flex;
-  border: none;
-  display: flex;
-  outline: none;
-  color: white;
-  font-size: 17px;
-  border-bottom: 4px solid white;
+    width: 330px;
+    display: flex;
+    border: none;
+    display: flex;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    border-bottom: 4px solid white;
 }
 
 .swap button {
-  margin-top: 13px;
-  width: 45px;
-  border-radius: 15%;
-  background-color: #212836;
-  border-color: #212836;
-  cursor: pointer;
+    margin-top: 13px;
+    width: 45px;
+    border-radius: 15%;
+    background-color: #323762b7;
+    border-color: #323762b7;
+    cursor: pointer;
 }
 
 .swap button i {
-  font-size: 17px;
-  margin-right: 7px;
-  margin-top: 5px;
-  color: white;
-  cursor: pointer;
+    font-size: 17px;
+    margin-right: 7px;
+    margin-top: 5px;
+    color: white;
+    cursor: pointer;
 }
 
 .swap button:hover {
-  background-color: #293140;
+    background-color: #242842;
 }
 
 .container-fluid {
-  width: 430px;
-  display: flex;
-  margin-top: 10px;
-  background-color: #1a202c;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 13px;
-  margin-bottom: 105px;
+    width: 430px;
+    display: flex;
+    margin-top: 10px;
+    background-color: #1a202c;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 13px;
+    margin-bottom: 105px;
 }
 
 .custom-select {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  font-size: 17px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    font-size: 17px;
 }
 
 .dropdown {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .fromdrop {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .intodrop {
-  margin-top: -20px;
+    margin-top: -20px;
 }
 
 .fas {
-  font-size: 17px;
-  margin-left: 5px;
+    font-size: 17px;
+    margin-left: 5px;
 }
 
 .btn-scolor {
-  background-color: #212836;
-  font-family: "Open Sans", sans-serif;
-  color: white;
-  width: 180px;
-  font-size: 17px;
+    background-color: #323762b7;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    border-color: #323762b7;
+    width: 180px;
+    font-size: 17px;
 }
 
 .btn-scolor:hover {
-  background-color: #293140;
-  color: white;
+    background-color: #242842;
+    color: white;
 }
 
 .btn-rcolor {
-  background-color: #212836;
-  font-family: "Open Sans", sans-serif;
-  color: white;
-  width: 180px;
-  font-size: 17px;
+    background-color: #323762b7;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    border-color: #323762b7;
+    width: 180px;
+    font-size: 17px;
 }
 
 .btn-rcolor:hover {
-  background-color: #293140;
-  color: white;
+    background-color: #242842;
+    color: white;
 }
 
 .result {
-  font-size: 60px;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  margin-top: -19px;
-  word-break: break-all;
+    font-size: 60px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin-top: -19px;
+    word-break: break-all;
 }
 
 .rate {
-  font-size: 30px;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-  margin-top: 13px;
-  margin-bottom: 30px;
-  word-break: break-all;
+    font-size: 30px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 13px;
+    margin-bottom: 30px;
+    word-break: break-all;
 }
