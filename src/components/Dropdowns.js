@@ -1,4 +1,6 @@
 import React from 'react'
+import { language } from '../config/language'
+
 
 function Dropdowns({ labelName, handleChange, value }) {
   return (
@@ -11,17 +13,14 @@ function Dropdowns({ labelName, handleChange, value }) {
           value={value}
           onChange={event => handleChange(event)}
         >
-          <option>USD</option>
-          <option>EUR</option>
-          <option>PHP</option>
-          <option>AUD</option>
-          <option>INR</option>
-          <option>NZD</option>
-          <option>JPY</option>
+          {language.map(languages =>
+            <option>{languages}</option>
+          )}
         </select>
       </label>
     </>
   )
 }
+
 
 export default Dropdowns
