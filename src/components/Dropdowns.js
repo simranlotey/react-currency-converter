@@ -14,7 +14,7 @@ function Dropdowns({ labelName, handleChange, value }) {
           onChange={event => handleChange(event)}
         >
           {language.map(languages =>
-            <option>{languages}</option>
+            <option key={languages.code}>{languages.code}</option>
           )}
         </select>
       </label>

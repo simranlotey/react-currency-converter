@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import {
     API_DOMAIN,
-    API_KEY,
-    URL
+    API_KEY
 } from '../config/api';
 import Dropdowns from "../components/Dropdowns"
-import Convertresult from "../components/Convertresult"
+import ConvertResult from "../components/ConvertResult"
 
 class CurrencyConverter extends Component {
 
@@ -24,7 +23,7 @@ class CurrencyConverter extends Component {
 
     convertCurrency = async ({ from, into, amount }) => {
         this.setState({ loading: true });
-        let url = `${API_DOMAIN}${from}_${into}${URL}${API_KEY}`;
+        let url = `${API_DOMAIN}${from}_${into}${API_KEY}`;
         let data = await fetch(url);
         let parsedData = await data.json();
         const conversionRate = parsedData[`${from}_${into}`];
@@ -109,11 +108,11 @@ class CurrencyConverter extends Component {
                         >Reset <i className="fas fa-redo-alt"></i></button>
                     </div>
                     <div className='mt-5 mb-2 text-center'>
-                        <Convertresult
+                        <ConvertResult
                             Loading={loading}
                             result={conversionResult}
                             rate={conversionRate}
-                        ></Convertresult>
+                        ></ConvertResult>
                     </div>
                 </div>
             </>

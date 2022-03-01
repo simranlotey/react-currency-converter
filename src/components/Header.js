@@ -1,13 +1,13 @@
 import React from 'react'
 import '../App.css';
-import { Header } from '../config/api';
+import { heading } from '../config/api';
 
-function header() {
+function Header() {
     return (
         <div className="header">
-            <span className="text-center">{Header}</span>
+            <span className="text-center">{heading}</span>
         </div>
     )
 }
 
-export default header
+export default Header

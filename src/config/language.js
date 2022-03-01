@@ -1,9 +1,9 @@
 export const language = [
-    "USD",
-    "EUR",
-    "PHP",
-    "AUD",
-    "INR",
-    "NZD",
-    "JPY"
+    { code: "USD" },
+    { code: "EUR" },
+    { code: "PHP" },
+    { code: "AUD" },
+    { code: "INR" },
+    { code: "NZD" },
+    { code: "JPY" }
 ]
