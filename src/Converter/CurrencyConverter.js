@@ -27,7 +27,6 @@ class CurrencyConverter extends Component {
         let data = await fetch(url);
         let parsedData = await data.json();
         const conversionRate = parsedData[`${from}_${into}`];
-        console.log(conversionRate)
         const conversionResult = conversionRate * amount;
         this.setState({
             conversionRate: conversionRate.toFixed(2),
