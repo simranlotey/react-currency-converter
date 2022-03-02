@@ -2,7 +2,6 @@ import React from 'react'
 import Spinner from './Spinner'
 
 
-
 function Result(result, rate) {
     return <>
         <h1 className="result">{result}</h1>
