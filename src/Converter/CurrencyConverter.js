@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import {
-    API_DOMAIN,
-    API_KEY
+    endpointPath
 } from '../config/api';
 import Dropdowns from "../components/Dropdowns"
 import ConvertResult from "../components/ConvertResult"
@@ -23,14 +22,15 @@ class CurrencyConverter extends Component {
 
     convertCurrency = async ({ from, into, amount }) => {
         this.setState({ loading: true });
-        let url = `${API_DOMAIN}${from}_${into}${API_KEY}`;
+        let url = endpointPath(from, into);
         let data = await fetch(url);
         let parsedData = await data.json();
         const conversionRate = parsedData[`${from}_${into}`];
+        console.log(parsedData)
         const conversionResult = conversionRate * amount;
         this.setState({
-            conversionRate: conversionRate.toFixed(2),
-            conversionResult: conversionResult.toFixed(2),
+            conversionRate: conversionRate,
+            conversionResult: conversionResult,
             loading: false
         })
     }
