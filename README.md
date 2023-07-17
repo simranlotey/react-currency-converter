@@ -1,4 +1,4 @@
-# React Currency Converter
+# Currency Converter
 
 ![](https://github.com/simranlotey/react-currency-converter/blob/master/src/components/Images/demo.png)
 
