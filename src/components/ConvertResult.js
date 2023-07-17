@@ -1,23 +1,32 @@
-import React from 'react'
-import Spinner from './Spinner'
+import React from "react";
+import Spinner from "./Spinner";
 
-
-function ConvertResult({ Loading, result, rate }) {
-    return (
-        <>
-            {Loading ? (
-                <Spinner />
-            ) : (
-                result &&
-                rate && (
-                    <>
-                        <h1 className="result">{result}</h1>
-                        <h4 className="rate ">{rate}</h4>
-                    </>
-                )
-            )}
-        </>
-    )
+function ConvertResult({ Loading, result, rate, into, from, amount, date }) {
+  return (
+    <>
+      {Loading ? (
+        <Spinner />
+      ) : (
+        result &&
+        rate && (
+          <>
+            <p className="value">
+              {amount} {from}=
+            </p>
+            <p className="answer">
+              {result} {into}
+            </p>
+            <p className="rate">
+              Rate={rate}
+            </p>
+            <p className="date">
+              Last updated on: {date}
+            </p>
+          </>
+        )
+      )}
+    </>
+  );
 }
 
-export default ConvertResult
+export default ConvertResult;

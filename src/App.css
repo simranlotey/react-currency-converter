@@ -5,59 +5,73 @@
   box-sizing: border-box;
 }
 
-.header span {
-  font-family: "Signika Negative", sans-serif;
-  color: white;
-  font-size: 44px;
-  margin-top: 40px;
-  text-transform: uppercase;
+body {
   display: flex;
+  align-items: center;
   justify-content: center;
+  background: #171923;
+}
+
+.header {
+  text-align: center;
+  padding: 50px 0px 20px 0px;
+}
+
+span {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.container-fluid {
+  width: 400px;
+  height: auto;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 13px;
+  background-color: #1a202c;
+}
+
+.part-1 {
+  padding: 35px 30px 35px 30px;
 }
 
 .amount {
-  width: 330px;
-  display: flex;
+  width: 100%;
   border: none;
-  display: flex;
   outline: none;
   color: white;
   font-size: 17px;
   border-bottom: 4px solid white;
 }
 
-.swap button {
-  margin-top: 13px;
-  width: 45px;
-  border-radius: 15%;
+.from {
+  padding-top: 20px;
+}
+
+.swap {
+  padding-top: 18px;
+  text-align: center;
+}
+
+#myDropdown {
+  height: 90px !important;
+}
+
+.swap-btn {
+  padding: 7px 16px 7px 16px;
   background-color: #323762b7;
   border-color: #323762b7;
   cursor: pointer;
+  border-radius: 14%;
 }
 
 .swap button i {
-  font-size: 17px;
-  margin-right: 7px;
-  margin-top: 5px;
   color: white;
-  cursor: pointer;
 }
 
 .swap button:hover {
   background-color: #242842;
-}
-
-.container-fluid {
-  width: 430px;
-  display: flex;
-  margin-top: 10px;
-  background-color: #1a202c;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  border-radius: 13px;
-  margin-bottom: 105px;
 }
 
 .custom-select {
@@ -69,60 +83,132 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.fromdrop {
-  margin-top: 30px;
+.into {
+  margin-top: -11px;
 }
 
-.intodrop {
-  margin-top: -20px;
+.custom-button {
+  text-align: center;
+  padding-top: 19px;
 }
 
-.fas {
-  font-size: 17px;
-  margin-left: 5px;
+.custom-button i {
+  font-size: 15px;
 }
-
-.btn-scolor {
+.custom-btn {
   background-color: #323762b7;
   font-family: "Open Sans", sans-serif;
   color: white;
+  padding: 8px 46px 8px 46px;
   border-color: #323762b7;
-  width: 180px;
   font-size: 17px;
 }
 
-.btn-scolor:hover {
+.custom-btn:hover {
   background-color: #242842;
   color: white;
 }
 
-.btn-rcolor {
-  background-color: #323762b7;
-  font-family: "Open Sans", sans-serif;
-  color: white;
-  border-color: #323762b7;
-  width: 180px;
-  font-size: 17px;
-}
-
-.btn-rcolor:hover {
-  background-color: #242842;
-  color: white;
-}
-
-.result {
-  font-size: 60px;
+.value {
+  padding: 17px 0px 0px 0px;
+  font-size: 20px;
+  margin: 0;
   color: white;
   font-family: "Open Sans", sans-serif;
-  margin-top: -19px;
+  word-break: break-all;
+}
+
+.answer {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-family: "Open Sans", sans-serif;
   word-break: break-all;
 }
 
 .rate {
-  font-size: 30px;
+  font-size: 22px;
+  margin: 0;
+  text-align: center;
   color: white;
   font-family: "Open Sans", sans-serif;
-  margin-top: 13px;
-  margin-bottom: 30px;
   word-break: break-all;
+}
+
+.date {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: #929292;
+  padding-top: 10px;
+}
+
+@media screen and (max-device-width: 480px) {
+  .container-fluid {
+    width: 350px;
+  }
+  span {
+    font-size: 30px;
+  }
+  .part-1 {
+    padding: 32px 15px 32px 15px;
+  }
+}
+
+@media screen and (max-device-width: 375px) {
+  .container-fluid {
+    width: 320px;
+  }
+
+  span {
+    font-size: 27px;
+  }
+
+  .custom-btn {
+    padding: 7px 40px 7px 40px;
+  }
+
+  .swap-btn {
+    padding: 7px 16px 7px 16px;
+  }
+
+  .answer {
+    font-size: 35px;
+  }
+
+  .rate {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+  .container-fluid {
+    width: 295px;
+  }
+
+  .part-1 {
+    padding: 30px 10px 30px 10px;
+  }
+
+  span {
+    font-size: 26px;
+  }
+
+  .custom-btn {
+    padding: 9px 40px 9px 40px;
+  }
+
+  .value {
+    font-size: 18px;
+  }
+
+  .answer {
+    font-size: 30px;
+  }
+
+  .rate {
+    font-size: 20px;
+  }
 }

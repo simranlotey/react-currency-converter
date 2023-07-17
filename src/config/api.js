@@ -1,5 +1,5 @@
-export const heading = "currency converter"
-export const API_DOMAIN = "https://free.currconv.com/api/v7/convert?q="
-export const API_KEY = "e5b6419c6d8fc5692df5"
-export const endpointPath = (from, to) =>
-    `${API_DOMAIN}${from}_${to}&compact=ultra&apiKey=${API_KEY}`;
+export const heading = "currency converter";
+export const API_DOMAIN = "https://api.apilayer.com/fixer/convert?to=";
+export const API_KEY = "USE YOUR API KEY";
+export const endpointPath = (from, to, amount) =>
+  `${API_DOMAIN}${to}&from=${from}&amount=${amount}`;
