@@ -30,6 +30,7 @@ span {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 13px;
   background-color: #1a202c;
+  /* padding-bottom: 20px; */
 }
 
 .part-1 {
@@ -52,10 +53,6 @@ span {
 .swap {
   padding-top: 18px;
   text-align: center;
-}
-
-#myDropdown {
-  height: 90px !important;
 }
 
 .swap-btn {
@@ -145,6 +142,9 @@ span {
   padding-top: 10px;
 }
 
+.bottom {
+  padding-bottom: 60px;
+}
 @media screen and (max-device-width: 480px) {
   .container-fluid {
     width: 350px;

@@ -145,6 +145,7 @@ class CurrencyConverter extends Component {
             </div>
           </div>
         </div>
+        <div className="bottom"></div>
       </>
     );
   }
