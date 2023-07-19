@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import CurrencyConverter from "./Converter/CurrencyConverter";
+import CurrencyConverter from "./components/CurrencyConverter";
 
 function App() {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
-import Spinner from "./Spinner";
+import Loading from "./Loading";
 
-function ConvertResult({ Loading, result, rate, into, from, amount, date }) {
+function ConvertResult({ loading, result, rate, into, from, amount, date }) {
   return (
     <>
-      {Loading ? (
-        <Spinner />
+      {loading ? (
+        <Loading />
       ) : (
         result &&
         rate && (
@@ -16,12 +16,8 @@ function ConvertResult({ Loading, result, rate, into, from, amount, date }) {
             <p className="answer">
               {result} {into}
             </p>
-            <p className="rate">
-              Rate={rate}
-            </p>
-            <p className="date">
-              Last updated on: {date}
-            </p>
+            <p className="rate">Rate={rate}</p>
+            <p className="date">Last updated on: {date}</p>
           </>
         )
       )}

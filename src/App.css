@@ -30,10 +30,9 @@ span {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 13px;
   background-color: #1a202c;
-  /* padding-bottom: 20px; */
 }
 
-.part-1 {
+.app {
   padding: 35px 30px 35px 30px;
 }
 
@@ -84,28 +83,6 @@ span {
   margin-top: -11px;
 }
 
-.custom-button {
-  text-align: center;
-  padding-top: 19px;
-}
-
-.custom-button i {
-  font-size: 15px;
-}
-.custom-btn {
-  background-color: #323762b7;
-  font-family: "Open Sans", sans-serif;
-  color: white;
-  padding: 8px 46px 8px 46px;
-  border-color: #323762b7;
-  font-size: 17px;
-}
-
-.custom-btn:hover {
-  background-color: #242842;
-  color: white;
-}
-
 .value {
   padding: 17px 0px 0px 0px;
   font-size: 20px;
@@ -145,6 +122,73 @@ span {
 .bottom {
   padding-bottom: 60px;
 }
+
+.loading {
+  width: 100%;
+  padding-top: 17px;
+  display: flex;
+}
+
+.loading .line {
+  border-radius: 6px;
+  background: rgba(130, 130, 130, 0.2);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, rgba(130, 130, 130, 0.2)),
+    color-stop(18%, rgba(130, 130, 130, 0.3)),
+    color-stop(33%, rgba(130, 130, 130, 0.2))
+  );
+  background: linear-gradient(
+    to right,
+    rgba(130, 130, 130, 0.2) 8%,
+    rgba(130, 130, 130, 0.3) 18%,
+    rgba(130, 130, 130, 0.2) 33%
+  );
+  animation: wave-lines 2s infinite ease-out;
+}
+
+.loading1 {
+  flex: 2;
+}
+
+.loading .line:last-child {
+  margin-bottom: 0;
+}
+
+.hw1 {
+  height: 17px !important;
+  margin-top: 11px !important;
+  width: 23% !important;
+}
+
+.hm2 {
+  margin-top: 20px;
+  height: 35px;
+}
+
+.hw3 {
+  height: 22px !important;
+  margin-top: 19px !important;
+  width: 100% !important;
+}
+
+.hw4 {
+  height: 11px !important;
+  margin-top: 19px !important;
+  width: 57% !important;
+}
+
+@keyframes wave-lines {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
 @media screen and (max-device-width: 480px) {
   .container-fluid {
     width: 350px;
@@ -152,7 +196,7 @@ span {
   span {
     font-size: 30px;
   }
-  .part-1 {
+  .app {
     padding: 32px 15px 32px 15px;
   }
 }
@@ -161,25 +205,18 @@ span {
   .container-fluid {
     width: 320px;
   }
-
   span {
     font-size: 27px;
   }
-
-  .custom-btn {
-    padding: 7px 40px 7px 40px;
-  }
-
   .swap-btn {
     padding: 7px 16px 7px 16px;
   }
-
   .answer {
     font-size: 35px;
   }
-
-  .rate {
-    font-size: 22px;
+  .hm2 {
+    margin-top: 18px;
+    height: 30px;
   }
 }
 
@@ -187,28 +224,30 @@ span {
   .container-fluid {
     width: 295px;
   }
-
-  .part-1 {
+  .app {
     padding: 30px 10px 30px 10px;
   }
-
   span {
     font-size: 26px;
   }
-
-  .custom-btn {
-    padding: 9px 40px 9px 40px;
-  }
-
   .value {
     font-size: 18px;
   }
-
   .answer {
     font-size: 30px;
   }
-
   .rate {
     font-size: 20px;
+  }
+  .hm2 {
+    height: 25px !important;
+  }
+  .hw1 {
+    margin-top: 7px !important;
+    height: 15px !important;
+  }
+  .hw3 {
+    height: 20px !important;
+    margin-top: 18px !important;
   }
 }
