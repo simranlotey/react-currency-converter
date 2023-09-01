@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { endpointPath, API_KEY } from "../config/api";
-import Dropdowns from "./Dropdowns";
+import Dropdowns from "./Dropdown";
 import ConvertResult from "./ConvertResult";
 import moment from "moment";
 
-const CurrencyConverter = () => {
-  const [from, setFrom] = useState("🇺🇸 USD - United States Dollar");
-  const [into, setInto] = useState("🇮🇳 INR - Indian Rupee");
-  const [loading, setLoading] = useState(false);
-  const [amount, setAmount] = useState(1);
-  const [conversionResult, setConversionResult] = useState("");
-  const [conversionRate, setConversionRate] = useState("");
-  const [amountValue, setAmountValue] = useState("");
-  const [fromField, setFromField] = useState("");
-  const [intoField, setIntoField] = useState("");
-  const [date, setDate] = useState("");
+const CurrencyConverter: React.FC = () => {
+  const [from, setFrom] = useState<string>("🇺🇸 USD - United States Dollar");
+  const [into, setInto] = useState<string>("🇮🇳 INR - Indian Rupee");
+  const [loading, setLoading] = useState<boolean>(false);
+  const [amount, setAmount] = useState<number>(1);
+  const [conversionResult, setConversionResult] = useState<string>("");
+  const [conversionRate, setConversionRate] = useState<string>("");
+  const [amountValue, setAmountValue] = useState<string>("");
+  const [fromField, setFromField] = useState<string>("");
+  const [intoField, setIntoField] = useState<string>("");
+  const [date, setDate] = useState<string>("");
 
-  const convertCurrency = async (from, into, amount) => {
-    if (amount === 0 || amount === "" || amount < 0) {
+  const convertCurrency = async (
+    from: string,
+    into: string,
+    amount: number
+  ) => {
+    const amountValue =
+      typeof amount === "string" ? parseFloat(amount) : amount;
+
+    if (amountValue === 0 || isNaN(amountValue) || amountValue < 0) {
       setLoading(false);
       setConversionResult("");
       setConversionRate("");
@@ -27,7 +34,7 @@ const CurrencyConverter = () => {
     setLoading(true);
     const fromv = from.split(" ")[1].trim();
     const intov = into.split(" ")[1].trim();
-    const url = endpointPath(fromv, intov, amount);
+    const url = endpointPath(fromv, intov, amountValue);
     try {
       const response = await axios.get(url, {
         headers: { apikey: API_KEY },
@@ -57,17 +64,17 @@ const CurrencyConverter = () => {
     convertCurrency(from, into, amount);
   }, [from, into, amount]);
 
-  const handleInput = (event) => {
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
-    setAmount(value);
+    setAmount(Number(value));
   };
 
-  const handleFrom = (event) => {
+  const handleFrom = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value } = event.currentTarget;
     setFrom(value);
   };
 
-  const handleInto = (event) => {
+  const handleInto = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value } = event.currentTarget;
     setInto(value);
   };
@@ -110,11 +117,11 @@ const CurrencyConverter = () => {
           <div className="result">
             <ConvertResult
               loading={loading}
-              result={conversionResult}
-              rate={conversionRate}
+              result={parseFloat(conversionResult)}
+              rate={parseFloat(conversionRate)}
               into={intoField}
               from={fromField}
-              amount={amountValue}
+              amount={parseFloat(amountValue)}
               date={date}
             ></ConvertResult>
           </div>

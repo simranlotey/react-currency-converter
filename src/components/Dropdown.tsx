@@ -1,13 +1,19 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { language } from "../config/language";
 
-const label = {
+interface DropdownsProps {
+  labelName: string;
+  handleChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  value: string;
+}
+
+const label: React.CSSProperties = {
   width: "100%",
   color: "white",
   fontSize: "18px",
 };
 
-function Dropdowns({ labelName, handleChange, value }) {
+function Dropdowns({ labelName, handleChange, value }: DropdownsProps) {
   return (
     <>
       <label className="dropdown" style={label}>

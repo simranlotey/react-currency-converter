@@ -1,14 +1,32 @@
 import React from "react";
 import Loading from "./Loading";
 
-function ConvertResult({ loading, result, rate, into, from, amount, date }) {
+interface ConvertResultProps {
+  loading: boolean;
+  result: number | null;
+  rate: number | null;
+  into: string;
+  from: string;
+  amount: number;
+  date: string;
+}
+
+function ConvertResult({
+  loading,
+  result,
+  rate,
+  into,
+  from,
+  amount,
+  date,
+}: ConvertResultProps) {
   return (
     <>
       {loading ? (
         <Loading />
       ) : (
-        result &&
-        rate && (
+        result !== null &&
+        rate !== null && (
           <>
             <p className="value">
               {amount} {from}=

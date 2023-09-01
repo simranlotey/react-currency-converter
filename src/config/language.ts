@@ -1,4 +1,4 @@
-export const language = [
+export const language: { code: string }[] = [
   { code: "🇦🇺 AUD - Australian Dollar" },
   { code: "🇧🇬 BGN - Bulgarian Lev" },
   { code: "🇧🇷 BRL - Brazilian Real" },
