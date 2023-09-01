@@ -14,6 +14,7 @@ The React Currency Converter is a web application that enables users to perform 
 ## Technologies Used
 
 - React: JavaScript library for building user interfaces.
+- TypeScript: A statically typed superset of JavaScript, adding type checking to your code.
 - Bootstrap: CSS framework for responsive and visually appealing designs.
 - Axios: Promise-based HTTP client for making API requests.
 - Moment: JavaScript library for parsing, validating, manipulating, and formatting dates.
