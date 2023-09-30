@@ -1,0 +1,86 @@
+.loading {
+  width: 100%;
+  padding-top: 17px;
+  display: flex;
+}
+
+.loading .line {
+  border-radius: 6px;
+  background: rgba(130, 130, 130, 0.2);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, rgba(130, 130, 130, 0.2)),
+    color-stop(18%, rgba(130, 130, 130, 0.3)),
+    color-stop(33%, rgba(130, 130, 130, 0.2))
+  );
+  background: linear-gradient(
+    to right,
+    rgba(130, 130, 130, 0.2) 8%,
+    rgba(130, 130, 130, 0.3) 18%,
+    rgba(130, 130, 130, 0.2) 33%
+  );
+  animation: wave-lines 2s infinite ease-out;
+}
+
+.loadings {
+  flex: 2;
+}
+
+.loading .line:last-child {
+  margin-bottom: 0;
+}
+
+.hw1 {
+  height: 17px !important;
+  margin-top: 11px !important;
+  width: 23% !important;
+}
+
+.hm2 {
+  margin-top: 20px;
+  height: 35px;
+}
+
+.hw3 {
+  height: 22px !important;
+  margin-top: 19px !important;
+  width: 100% !important;
+}
+
+.hw4 {
+  height: 11px !important;
+  margin-top: 19px !important;
+  width: 57% !important;
+}
+
+@keyframes wave-lines {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@media screen and (max-device-width: 375px) {
+  .hm2 {
+    margin-top: 18px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+  .hm2 {
+    height: 25px !important;
+  }
+  .hw1 {
+    margin-top: 7px !important;
+    height: 15px !important;
+  }
+  .hw3 {
+    height: 20px !important;
+    margin-top: 18px !important;
+  }
+}
