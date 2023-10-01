@@ -22,7 +22,7 @@ const OptionComponent: React.FC<any> = (props) => {
 const Dropdowns: React.FC<DropdownsProps> = (props) => {
   const { handleChange, placeholder, value } = props;
 
-  const selectValue = currency.find((option) => option.value === value);
+  const selectValue = currency.find((option) => option.label === value);
 
   return (
     <Select
@@ -30,7 +30,6 @@ const Dropdowns: React.FC<DropdownsProps> = (props) => {
       onChange={handleChange}
       placeholder={placeholder}
       styles={customStyles}
-      className="shadow-sm"
       value={selectValue}
       components={{ Option: OptionComponent }}
     />

@@ -12,12 +12,13 @@
 
 .currency-amount {
   width: 100%;
-  border: none;
+  border: 0;
+  border-radius: 7px;
   outline: none;
   color: white;
   font-size: 17px;
   background-color: rgb(33, 37, 41);
-  border-bottom: 4px solid white;
+  border-bottom: 3px solid white;
 }
 .currency-from {
   padding-top: 30px;
@@ -31,12 +32,16 @@
 .currency-swap-btn {
   padding: 7px 16px 7px 16px;
   background-color: #323762b7;
-  border-color: #323762b7;
   cursor: pointer;
-  border-radius: 14%;
+  border-radius: 7px;
 }
 
-.currency-swap > button > i {
+.currency-swap button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.currency-swap button i {
   color: white;
 }
 

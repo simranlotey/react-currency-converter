@@ -7,8 +7,8 @@ import moment from "moment";
 import "./index.css";
 
 const CurrencyConverter: React.FC = () => {
-  const [from, setFrom] = useState<string>("");
-  const [into, setInto] = useState<string>("");
+  const [from, setFrom] = useState<string>("EUR - Euro (€)");
+  const [into, setInto] = useState<string>("PHP - Philippine Peso (₱)");
   const [loading, setLoading] = useState<boolean>(false);
   const [amount, setAmount] = useState<string>("1");
   const [currencyResult, setCurrencyResult] = useState<string>("");
@@ -90,7 +90,7 @@ const CurrencyConverter: React.FC = () => {
       <div className="container-fluid">
         <div className="currency-app">
           <input
-            className="form-control-lg currency-amount shadow-sm"
+            className="form-control-lg currency-amount"
             placeholder="Enter Amount"
             value={amount}
             type="number"
@@ -105,7 +105,7 @@ const CurrencyConverter: React.FC = () => {
           </div>
           <div className="currency-swap">
             <button
-              className="btn currency-swap-btn shadow-sm"
+              className="btn currency-swap-btn"
               onClick={handleSwitch}
             >
               <i className="fas fa-sort"></i>
