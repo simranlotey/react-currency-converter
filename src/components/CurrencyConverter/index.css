@@ -1,7 +1,6 @@
 .container-fluid {
   width: 400px;
   height: auto;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: #1a202c;
 }
@@ -19,7 +18,10 @@
   font-size: 17px;
   background-color: rgb(33, 37, 41);
   border-bottom: 3px solid white;
+  -webkit-border-bottom: 3px solid white; 
+  -moz-border-bottom: 3px solid white;
 }
+
 .currency-from {
   padding-top: 30px;
 }
@@ -27,13 +29,6 @@
 .currency-swap {
   padding-top: 18px;
   text-align: center;
-}
-
-.currency-swap-btn {
-  padding: 7px 16px 7px 16px;
-  background-color: #323762b7;
-  cursor: pointer;
-  border-radius: 7px;
 }
 
 .currency-swap button:focus{
@@ -47,6 +42,13 @@
 
 .currency-swap button:hover {
   background-color: #242842;
+}
+
+.currency-swap-btn {
+  padding: 7px 16px 7px 16px;
+  background-color: #323762b7;
+  cursor: pointer;
+  border-radius: 7px;
 }
 
 .currency-into {

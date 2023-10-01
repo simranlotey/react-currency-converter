@@ -22,7 +22,7 @@ const OptionComponent: React.FC<any> = (props) => {
 const Dropdowns: React.FC<DropdownsProps> = (props) => {
   const { handleChange, placeholder, value } = props;
 
-  const selectValue = currency.find((option) => option.label === value);
+  const selectValue = currency.find((option) => option.value === value || option.label === value);
 
   return (
     <Select
