@@ -8,7 +8,7 @@ import "./index.css";
 
 const CurrencyConverter: React.FC = () => {
   const [from, setFrom] = useState<string>("EUR - Euro (€)");
-  const [into, setInto] = useState<string>("PHP - Philippine Peso (₱)");
+  const [into, setInto] = useState<string>("INR - Indian Rupee (₹)");
   const [loading, setLoading] = useState<boolean>(false);
   const [amount, setAmount] = useState<string>("1");
   const [currencyResult, setCurrencyResult] = useState<string>("");

@@ -3,7 +3,19 @@ export const customStyles = {
     ...provided,
     maxHeight: "226px",
     backgroundColor: "rgb(33, 37, 41)",
+    borderRadius: "7px", 
+    padding: "0",
     color: "#fff",
+    '&::-webkit-scrollbar': {
+      width: '2.5px',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#2d3338',
+    },
+  }),
+  menu: (provided: any) => ({
+    ...provided,
+    borderRadius: "15px",
   }),
   option: (provided: any, state: any) => ({
     ...provided,
