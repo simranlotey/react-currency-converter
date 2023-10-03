@@ -2,15 +2,15 @@ export const customStyles = {
   menuList: (provided: any) => ({
     ...provided,
     maxHeight: "226px",
-    backgroundColor: "rgb(33, 37, 41)",
-    borderRadius: "7px", 
+    backgroundColor: "#212529",
+    borderRadius: "7px",
     padding: "0",
     color: "#fff",
-    '&::-webkit-scrollbar': {
-      width: '2.5px',
+    "&::-webkit-scrollbar": {
+      width: "2.5px",
     },
-    '&::-webkit-scrollbar-thumb': {
-      backgroundColor: '#2d3338',
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: "#2d3338",
     },
   }),
   menu: (provided: any) => ({
@@ -19,14 +19,15 @@ export const customStyles = {
   }),
   option: (provided: any, state: any) => ({
     ...provided,
-    backgroundColor: state.isFocused ? "#2d3338" : "",
+    backgroundColor: state.isFocused ? "#262b30" : "",
     cursor: "pointer",
     alignItems: "center",
     padding: "4px 0px 4px 10px",
   }),
+  
   control: (provided: any, state: any) => ({
     ...provided,
-    backgroundColor: "rgb(33, 37, 41)",
+    backgroundColor: state.isFocused ? "#262b30" : "#212529",
     padding: "4.8px",
     borderRadius: "7px",
     border: state.isFocused ? 0 : 0,

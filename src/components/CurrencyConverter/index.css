@@ -16,10 +16,14 @@
   outline: none;
   color: white;
   font-size: 17px;
-  background-color: rgb(33, 37, 41);
+  background-color: #212529;
   border-bottom: 3px solid white;
   -webkit-border-bottom: 3px solid white; 
   -moz-border-bottom: 3px solid white;
+}
+
+.currency-amount:focus {
+  background-color: #262b30;
 }
 
 .currency-from {
