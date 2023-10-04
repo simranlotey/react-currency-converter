@@ -57,4 +57,4 @@ We welcome contributions to enhance the functionality and user experience of the
 
 ## Acknowledgments
 
-- This project utilizes the [APILayer](https://apilayer.com/) for currency conversion data. We are grateful for their services.
+- This project utilizes the [API](https://www.exchangerate-api.com/) for currency conversion data. We are grateful for their services.
