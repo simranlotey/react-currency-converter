@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { endpointPath, API_KEY } from "../../config/api";
+import { endpointPath } from "../../config/api";
 import Dropdowns from "../Dropdown/Dropdown";
 import Result from "../Result/Result";
 import moment from "moment";
@@ -10,12 +10,10 @@ const CurrencyConverter: React.FC = () => {
   const [from, setFrom] = useState<string>("EUR - Euro (€)");
   const [into, setInto] = useState<string>("INR - Indian Rupee (₹)");
   const [loading, setLoading] = useState<boolean>(false);
-  const [amount, setAmount] = useState<string>("1");
+  const [amount, setAmount] = useState<number>(1);
   const [currencyResult, setCurrencyResult] = useState<string>("");
   const [currencyRate, setCurrencyRate] = useState<string>("");
   const [amountValue, setAmountValue] = useState<string>("");
-  const [fromField, setFromField] = useState<string>("");
-  const [intoField, setIntoField] = useState<string>("");
   const [update, setUpdate] = useState<string>("");
 
   const convertCurrency = async (
@@ -27,33 +25,31 @@ const CurrencyConverter: React.FC = () => {
       typeof amount === "string" ? parseFloat(amount) : amount;
 
     if (amountValue === 0 || isNaN(amountValue) || amountValue < 0) {
-      setLoading(false);
       setCurrencyResult("");
       setCurrencyRate("");
+      setLoading(false);
       return;
     }
-    setLoading(true);
+
     const fromValue = from.split(" ")[0].trim();
-    const intoValue = into.split(" ")[0].trim();
-    const url = endpointPath(fromValue, intoValue, amountValue);
+    const intoValue = into.split(" ")[0].trim().toUpperCase();
+    const url = endpointPath(fromValue);
     try {
-      const response = await axios.get(url, {
-        headers: { apikey: API_KEY },
-      });
+      setLoading(true);
+      const response = await axios.get(url);
       const parsedData = response.data;
-      const currencyRate = parsedData.info.rate.toFixed(2);
-      const currencyResult = parsedData.result.toFixed(2);
-      const amountValue = parsedData.query.amount;
-      const fromField = parsedData.query.from;
-      const intoField = parsedData.query.to;
-      const parsedUpdate = parsedData.date;
-      const update = moment(parsedUpdate).format("DD/MM/YYYY");
-      setCurrencyRate(currencyRate);
-      setCurrencyResult(currencyResult);
-      setAmountValue(amountValue);
-      setFromField(fromField);
-      setIntoField(intoField);
-      setUpdate(update);
+      if (intoValue in parsedData.conversion_rates) {
+        const currencyRate = parsedData.conversion_rates[intoValue];
+        const currencyResult = amountValue * currencyRate;
+        const parsedUpdate = parsedData.time_last_update_utc;
+        const update = moment(parsedUpdate).format("DD/MM/YYYY");
+        setCurrencyRate(currencyRate.toFixed(2));
+        setCurrencyResult(currencyResult.toFixed(2));
+        setAmountValue(amountValue.toString());
+        setUpdate(update);
+      } else {
+        console.error("Error while converting currency: Invalid data");
+      }
     } catch (error) {
       console.error("Error while converting currency:", error);
     } finally {
@@ -67,9 +63,9 @@ const CurrencyConverter: React.FC = () => {
     }
   }, [from, into, amount]);
 
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setAmount(value);
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setAmount(parseFloat(value));
   };
 
   const handleFrom = (selectedOption: any) => {
@@ -104,10 +100,7 @@ const CurrencyConverter: React.FC = () => {
             ></Dropdowns>
           </div>
           <div className="currency-swap">
-            <button
-              className="btn currency-swap-btn"
-              onClick={handleSwitch}
-            >
+            <button className="btn currency-swap-btn" onClick={handleSwitch}>
               <i className="fas fa-sort"></i>
             </button>
           </div>
@@ -123,8 +116,8 @@ const CurrencyConverter: React.FC = () => {
               loading={loading}
               result={parseFloat(currencyResult)}
               rate={parseFloat(currencyRate)}
-              into={intoField}
-              from={fromField}
+              into={into}
+              from={from}
               amount={parseFloat(amountValue)}
               update={update}
             ></Result>

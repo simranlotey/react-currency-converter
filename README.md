@@ -3,14 +3,14 @@
 ![](https://github.com/simranlotey/react-currency-converter/blob/master/src/components/Images/demo-1.png)
 ![](https://github.com/simranlotey/react-currency-converter/blob/master/src/components/Images/demo-2.png)
 
-The React Currency Converter is a web application that enables users to perform currency conversions using the [APILayer](https://apilayer.com/). With a simple and user-friendly interface, this app allows users to select the currencies they want to convert from and to, specify the amount, and instantly get the converted result. It is built using React, TypeScript, Bootstrap, Axios, and Moment libraries.
+The React Currency Converter is a web application that enables users to perform currency conversions using the [API](https://www.exchangerate-api.com/). With a simple and user-friendly interface, this app allows users to select the currencies they want to convert from and to, specify the amount, and instantly get the converted result. This app provides real-time exchange rate data for over 150+ currencies. It is built using React, TypeScript, Bootstrap, Axios, and Moment libraries.
 
 ## Features
 
 - Choose the currency to convert from a drop-down list.
 - Select the currency to convert to from another drop-down list.
 - Input the amount to be converted.
-- Click the "Convert" button to fetch the current exchange rate and get the converted amount.
+- Fetch the current exchange rate and get the converted amount.
 
 ## Technologies Used
 
@@ -19,7 +19,7 @@ The React Currency Converter is a web application that enables users to perform 
 - Bootstrap: CSS framework for responsive and visually appealing designs.
 - Axios: Promise-based HTTP client for making API requests.
 - Moment: JavaScript library for parsing, validating, manipulating, and formatting dates.
-- Currency-flags: A library displaying currency flags. I have used it in the dropdown.
+- Currency-flags: A library displaying currency flags. Used it in the dropdown.
 
 ## Getting Started
 

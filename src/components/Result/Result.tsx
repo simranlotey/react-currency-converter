@@ -21,6 +21,9 @@ function Result({
   amount,
   update,
 }: ResultProps) {
+  const fromField = from.split(" ")[0].trim().toUpperCase();
+  const intoField = into.split(" ")[0].trim().toUpperCase();
+
   return (
     <>
       {loading ? (
@@ -30,21 +33,21 @@ function Result({
         !isNaN(rate) && (
           <>
             <p className="currency-value">
-              {amount} {from}{" "}
+              {amount} {fromField}{" "}
               <span
                 className={`currency-flag currency-flag-sm currency-flag-${from.toLowerCase()}`}
               />
             </p>
             <p className="currency-result">
-              {result}{" "}
+              {result} ({intoField.toUpperCase()}){" "}
               <span
-                className={`currency-flag currency-flag-lg currency-flag-${into.toLowerCase()}`}
+                className={`currency-flag currency-flag-lg currency-flag-${intoField.toLowerCase()}`}
               />
             </p>
             <p className="currency-rate">
               Rate={rate}{" "}
               <span
-                className={`currency-flag currency-flag-sm currency-flag-${into.toLowerCase()}`}
+                className={`currency-flag currency-flag-sm currency-flag-${intoField.toLowerCase()}`}
               />
             </p>
             <p className="currency-update">Last updated on: {update}</p>

@@ -1,11 +1,11 @@
 .loading {
   width: 100%;
-  padding-top: 17px;
+  padding: 17px 0px 4px 0px;
   display: flex;
 }
 
 .loading .line {
-  border-radius: 6px;
+  border-radius: 5px;
   background: rgba(130, 130, 130, 0.2);
   background: -webkit-gradient(
     linear,
@@ -33,26 +33,25 @@
 }
 
 .hw1 {
-  height: 17px !important;
-  margin-top: 11px !important;
-  width: 23% !important;
+  height: 19px !important;
+  margin-top: 7px !important;
+  width: 100px !important;
 }
 
 .hm2 {
-  margin-top: 20px;
-  height: 35px;
+  margin-top: 12px;
+  height: 31px;
 }
 
 .hw3 {
-  height: 22px !important;
-  margin-top: 19px !important;
-  width: 100% !important;
+  margin-top: 12px !important;
+  height: 24px !important;
 }
 
 .hw4 {
-  height: 11px !important;
-  margin-top: 19px !important;
-  width: 57% !important;
+  height: 14px !important;
+  margin-top: 17px !important;
+  width: 180px !important;
 }
 
 @keyframes wave-lines {
@@ -66,21 +65,17 @@
 
 @media screen and (max-device-width: 375px) {
   .hm2 {
-    margin-top: 18px;
-    height: 30px;
+    margin-top: 12px;
+    height: 29px;
   }
 }
 
 @media screen and (max-device-width: 320px) {
-  .hm2 {
-    height: 25px !important;
-  }
   .hw1 {
     margin-top: 7px !important;
     height: 15px !important;
   }
   .hw3 {
     height: 20px !important;
-    margin-top: 18px !important;
   }
 }

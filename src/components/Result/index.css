@@ -8,7 +8,7 @@
 }
 
 .currency-result {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600;
   text-align: center;
   margin: 0;
@@ -18,7 +18,7 @@
 }
 
 .currency-rate {
-  font-size: 22px;
+  font-size: 21px;
   margin: 0;
   text-align: center;
   color: white;
@@ -36,18 +36,12 @@
 
 @media screen and (max-device-width: 375px) {
   .currency-result {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 
 @media screen and (max-device-width: 320px) {
-  .currency-value {
+  .currency-value, .currency-rate {
     font-size: 18px;
-  }
-  .currency-answer {
-    font-size: 30px;
-  }
-  .currency-rate {
-    font-size: 20px;
   }
 }
