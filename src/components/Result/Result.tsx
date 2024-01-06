@@ -12,15 +12,8 @@ interface ResultProps {
   update: string;
 }
 
-function Result({
-  loading,
-  result,
-  rate,
-  into,
-  from,
-  amount,
-  update,
-}: ResultProps) {
+function Result({ loading, result, rate, into, from, amount, update }: ResultProps) {
+  
   const fromField = from.split(" ")[0].trim().toUpperCase();
   const intoField = into.split(" ")[0].trim().toUpperCase();
 
