@@ -1,11 +1,11 @@
 .currency-header {
   text-align: center;
-  padding: 50px 0px 20px 0px;
+  padding: 0 0px 30px 0px;
 }
 
 .currency-header div {
   color: white;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 500;
   text-transform: uppercase;
 }
